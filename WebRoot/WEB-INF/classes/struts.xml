@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="GBK"></constant>
+	<package name="com.my.action" extends="json-default" namespace="/">
+		<action name="userinfo" class="com.my.action.UserinfoAction">
+			<result name="success">/Main.jsp</result>
+			<result name="error">/Login.jsp</result>
+			<result name="userinfoadd">/userinfoadd.jsp</result>
+			<result name="addsuccess">/addsuccess.jsp</result>
+			<result name="userinfoshow">/userinfoshow.jsp</result>
+			<result name="deletesuccess">/deletesuccess.jsp</result>
+			<result name="userinfopreupdate">/userinfopreupdate.jsp</result>
+		    <result name="userupdatesuccess">/userupdatesuccess.jsp</result>
+		    <!-- <result name="userinfoadd" type="RedirectAction">userinfo!findAll</result>  -->
+		</action>
+		<action name="bookcategory" class="com.my.action.BookcategoryAction">
+			<result name="bookcategoryshow">/bookcategoryshow.jsp</result>
+			<result name="bookcategorydeletesuccess">/bookcategorydeletesuccess.jsp</result>
+			<result name="bookcategorypreupdate">/bookcategorypreupdate.jsp</result>
+			<result name="bookcategoryupdatesuccess">/bookcategoryupdatesuccess.jsp</result>
+			<result name="bookcategoryadd">/bookcategoryadd.jsp</result>
+			<result name="bookcategoryaddsuccess">/bookcategoryaddsuccess.jsp</result>
+		</action>
+		<action name="book" class="com.my.action.BookAction">
+			<result name="bookshow">/bookshow.jsp</result>
+			<result name="bookadd">/bookadd.jsp</result>
+			<result name="bookaddsuccess">/bookaddsuccess.jsp</result>
+			<result name="bookpreupdate">/bookpreupdate.jsp</result>
+			<result name="bookupdatesuccess">/bookupdatesuccess.jsp</result>
+			<result name="bookgetbook">/bookgetbook.jsp</result>
+		</action>
+		
+		<action name="readercategory" class="com.my.action.ReadercategoryAction">
+			<result name="readercategoryshow">/readercategoryshow.jsp</result>
+			<result name="readercategoryadd">/readercategoryadd.jsp</result>
+			<result name="readercategoryaddsuccess">/readercategoryaddsuccess.jsp</result>
+			<result name="readercategorypreupdate">/readercategorypreupdate.jsp</result>
+			<result name="readercategoryupdatesuccess">/readercategoryupdatesuccess.jsp</result>
+		</action>
+		
+		<action name="reader" class="com.my.action.ReaderAction">
+			<result name="readershow">/readershow.jsp</result>
+			<result name="readeradd">/readeradd.jsp</result>
+			<result name="readeraddsuccess">/readeraddsuccess.jsp</result>
+			<result name="readerpreupdate">/readerpreupdate.jsp</result>
+			<result name="readerupdatesuccess">/readerupdatesuccess.jsp</result>
+			<result name="readerdeletesuccess">/readerdeletesuccess.jsp</result>
+		</action>
+		
+		<action name="borrow" class="com.my.action.BorrowAction">
+			<result name="borrowshow">/borrowshow.jsp</result>
+			<result name="borrow">/borrow.jsp</result>
+			<result name="borrowbooksuccess">borrowbooksuccess.jsp</result>
+		</action>
+		
+		<action name="readerajax" class="com.my.action.ReaderAjaxAction">
+			<result name="borrow" type="json">/borrow.jsp</result>
+		</action>
+		<action name="bookajax" class="com.my.action.BookAjaxAction">
+			<result name="borrow" type="json">/borrow.jsp</result>
+		</action>
+		
+		<action name="return" class="com.my.action.ReturnAction">
+			<result name="bookback">/bookback.jsp</result>
+			<result name="bookbacksuccess">/bookbacksuccess.jsp</result>
+			<result name="returnshow">/returnshow.jsp</result>
+		</action>
+		<action name="fine" class="com.my.action.FineAction">
+			<result name="fineshow">/fineshow.jsp</result>
+			<result name="fine">/finestate.jsp</result>
+			<result name="fineaddsuccess">fineaddsuccess.jsp</result>
+		</action>
+		<action name="page" class="com.my.action.PageAction">
+			<result name="bookshow">/bookshow.jsp</result>
+			<result name="bookcategoryshow">/bookcategoryshow.jsp</result>
+			<result name="userinfoshow">/userinfoshow.jsp</result>
+			<result name="readercategoryshow">/readercategoryshow.jsp</result>
+			<result name="borrowshow">/borrowshow.jsp</result>
+		</action>
+		
+	</package>
+</struts>

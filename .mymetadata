@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="bookmanager"
+  id="myeclipse.1458735188262"
+  context-root="/bookmanager"
+  j2ee-spec="5.0"
+  archive="bookmanager.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
